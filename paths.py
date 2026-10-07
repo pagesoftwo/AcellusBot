@@ -28,7 +28,16 @@ def resource(name):
 
 
 def config_path():
-    return os.path.join(app_dir(), "config.json")
+    target = os.path.join(app_dir(), "config.json")
+    try:
+        if not os.path.exists(target):
+            bundled = resource("config.json")
+            if os.path.exists(bundled):
+                import shutil as _sh
+                _sh.copy2(bundled, target)
+    except Exception:
+        pass
+    return target
 
 
 def dotenv_path():

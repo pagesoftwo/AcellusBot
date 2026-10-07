@@ -13,7 +13,9 @@ a = Analysis(
     ['main.py'],
     pathex=[],
     binaries=[],
-    datas=[('vision_prompt.txt', '.'), ('web', 'web')],
+    datas=[('vision_prompt.txt', '.'), ('web', 'web'),
+           ('config.json', '.'), ('setup_ollama.bat', '.'),
+           ('.env.example', '.')],
     hiddenimports=[
         'mss',
         'pygetwindow',
