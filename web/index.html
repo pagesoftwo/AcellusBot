@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AcellusAuto Dashboard</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header>
+  <div class="title">AcellusAuto <span id="build" class="build"></span></div>
+  <div id="status" class="status idle"><span id="dot" class="dot"></span><span id="statusText">connecting…</span></div>
+</header>
+
+<main>
+  <div id="tokenbar" class="tokenbar" style="display:none">
+    🔒 This dashboard needs a token.
+    <input id="tokeninput" type="text" placeholder="paste token" autocomplete="off">
+    <button id="tokensave" class="btn go small">Save</button>
+  </div>
+
+  <div id="activity" class="activity">—</div>
+
+  <div class="row">
+    <button id="btnStart" class="btn go">▶ Start (F8)</button>
+    <button id="btnPause" class="btn stop">⏸ Pause (F9)</button>
+  </div>
+
+  <section class="cards">
+    <div class="card"><div class="k">Uptime</div><div class="v" id="cUptime">—</div></div>
+    <div class="card"><div class="k">Answered</div><div class="v" id="cAnswered">—</div></div>
+    <div class="card"><div class="k">Videos</div><div class="v" id="cVideos">—</div></div>
+    <div class="card"><div class="k">Skipped</div><div class="v" id="cSkips">—</div></div>
+    <div class="card"><div class="k">Submits</div><div class="v" id="cSubmits">—</div></div>
+    <div class="card"><div class="k">Strikes</div><div class="v" id="cStrikes">—</div></div>
+  </section>
+
+  <section class="cards">
+    <div class="card wide"><div class="k">Class</div><div class="v small" id="cClass">—</div></div>
+    <div class="card"><div class="k">Budget left</div><div class="v" id="cBudget">—</div></div>
+    <div class="card wide"><div class="k">Last answer</div><div class="v small" id="cLast">—</div></div>
+  </section>
+
+  <section>
+    <h3>Live preview</h3>
+    <img id="shot" alt="capture preview" src="">
+    <div class="hint" id="shotHint">refreshes every 3s</div>
+  </section>
+
+  <section>
+    <h3>Log</h3>
+    <pre id="log">loading…</pre>
+  </section>
+
+  <footer><span id="cfg">—</span><br><span id="puburl"></span></footer>
+</main>
+
+<script src="/app.js"></script>
+</body>
+</html>

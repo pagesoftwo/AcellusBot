@@ -1,0 +1,7 @@
+mss
+pygetwindow
+pyautogui
+keyboard
+Pillow
+openai
+python-dotenv

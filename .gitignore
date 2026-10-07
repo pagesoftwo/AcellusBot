@@ -1,0 +1,34 @@
+# Secrets - NEVER commit these
+.env
+*.env
+!.env.example
+
+# Runtime / user files
+config.json
+*.log
+debug_*.png
+acellus_last_shot.jpg
+acellus_last_shot.png
+
+# PyInstaller output
+dist/
+build/
+*.spec
+!AcellusBot.spec
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+venv/
+.venv/
+
+# Update staging
+*.new.exe
+updater_*.bat
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
